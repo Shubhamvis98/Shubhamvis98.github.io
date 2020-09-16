@@ -1,0 +1,76 @@
+*{
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */    
+    color: #fff;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 15pt;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    position: fixed;
+    padding: 10px 70px;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    transition: all 0.3s ease 0s;
+    opacity: 0.7;
+}
+
+.logo{
+    width: 1%;
+}
+
+nav:hover{
+    opacity: 1;
+    transition: all 0.3s ease 0s;
+}
+
+.navbar li{
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    padding: 0 15px;
+}
+
+.navbar li a:hover{
+    color: white;
+    text-shadow: 0px 0px 5px white, 0px 0px 5px white;
+}
+.pad{
+    padding-top: 100px;
+}
+
+.logo{
+    display: block;
+    margin: 0 auto;
+    width: 192px;
+    height: 192px;
+    box-shadow: 20px 20px 30px 1px rgba(0, 0, 0, 1);
+    border-radius: 50%;
+}
+
+.content h1{
+    text-align: center;
+    font-size: 4em;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 20px 20px 30px black, 20px 20px 30px black, 20px 20px 30px black;
+}
