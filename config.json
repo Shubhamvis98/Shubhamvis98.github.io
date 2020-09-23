@@ -3,8 +3,8 @@
   "username": "Shubhamvis98",
   "name": "Shubham Vishwakarma",
   "userimg": "https://avatars3.githubusercontent.com/u/43336210?v=4",
-  "sort": "pushed",
-  "order": "asc",
+  "sort": "created",
+  "order": "desc",
   "includeFork": true,
   "theme": "dark.css",
   "types": [

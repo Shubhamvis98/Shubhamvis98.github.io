@@ -1,15 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 @import url("https://fonts.googleapis.com/css?family=Questrial");
 
-*{
-  user-select: none; /* supported by Chrome and Opera */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */    
-  color: #fff;
-}
-
 body {
   margin: 0%;
   padding: 0%;
@@ -563,13 +554,13 @@ body {
       rgba(10, 10, 10, 0.3),
       rgb(10, 10, 10, 1)
     ),
-    url("https://i.imgur.com/1Pv66h9.jpg");
+    url("https://i.imgur.com/bHYVsWI.jpg");
   --background-background: linear-gradient(
       0deg,
       rgba(10, 10, 10, 1),
       rgba(10, 10, 10, 0.6)
     ),
-    url("https://i.imgur.com/1Pv66h9.jpg") center center fixed;
+    url("https://i.imgur.com/bHYVsWI.jpg") center center fixed;
   --height: 50vh;
 }
 
@@ -600,6 +591,6 @@ body {
         rgba(10, 10, 10, 1),
         rgba(10, 10, 10, 0)
       ),
-      url("https://i.imgur.com/1Pv66h9.jpg") !important;
+      url("https://i.imgur.com/bHYVsWI.jpg") !important;
   }
 }
