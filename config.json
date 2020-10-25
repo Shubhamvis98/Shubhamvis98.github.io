@@ -4,13 +4,13 @@
   "name": "Shubham Vishwakarma",
   "userimg": "https://avatars3.githubusercontent.com/u/43336210?v=4",
   "sort": "created",
-  "order": "desc",
+  "order": "asc",
   "includeFork": true,
   "theme": "dark.css",
   "types": [
    "all"
   ],
-  "twitter": "Shubhamvis98",
-  "linkedin": "Shubhamvis98"
+  "twitter": "shubhamvis98",
+  "linkedin": "shubhamvis98"
  }
 ]
