@@ -1,0 +1,104 @@
+body {
+	background-image: linear-gradient(
+		90deg,
+		rgba(10, 10, 10, 0.3),
+		rgb(10, 10, 10, 1)
+	),
+	url("https://i.imgur.com/bHYVsWI.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+	color: white;
+}
+
+.avatar {
+	display: flex;
+	border: 2px solid white 10px;
+	border-radius: 50%;
+	width: 30vmin;
+	margin: 5em auto 0 auto;
+}
+
+.fa {
+	color: white;
+	text-decoration: none;
+}
+
+.socials {
+	text-align: center;
+	color: #fff;
+	margin: 3vh 0px !important;
+}
+
+.socials span {
+	display: inline-block !important;
+	margin-right: 2vw !important;
+	font-weight: normal !important;
+	font-size: 4vmin;
+}
+
+.socials span a {
+	font-weight: normal !important;
+}
+
+.hide {
+	display: none;
+}
+
+.jack {
+	font-size: 10vmin;
+	text-align: center;
+	font-family: 'VT323';
+}
+
+#jack {
+	padding-bottom: 10vmin;
+}
+
+.white {
+	color: white;
+}
+
+.green {
+	color: #00C100;
+}
+
+#subtxt {
+	color: #EBEDEF;
+}
+
+/*TYPEWRITER CODE*/
+.typewriter .jack {
+	display: none;
+	overflow: hidden;
+	border-right: .15em transparent;
+	white-space: nowrap;
+	margin: 0 auto;
+	letter-spacing: .15em;
+	animation:
+	typing 2s steps(40, end);
+}
+
+@keyframes typing {
+	from { width: 0 }
+	to { width: 100% }
+}
+
+@keyframes blink-caret {
+	from, to { border-color: transparent }
+	50% { border-color: orange; }
+}
+/*TYPEWRITER CODE*/
+
+
+@media (max-width: 1000px) {
+	.jack {
+		font-size: 5vmin;
+	}
+
+	.avatar {
+		margin: 5em auto 0 auto;
+	}
+}
