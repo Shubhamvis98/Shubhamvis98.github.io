@@ -1,104 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: rgb(240, 248, 255);
+  line-height: 1.18;
+  font-size: 12pt;
+  text-decoration: none;
+  transition: ease 300ms;
+}
+
 body {
-	background-image: linear-gradient(
-		90deg,
-		rgba(10, 10, 10, 0.3),
-		rgb(10, 10, 10, 1)
-	),
-	url("https://i.imgur.com/bHYVsWI.jpg");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-	margin: 0;
-	padding: 0;
-	color: white;
+  margin: 50px;
+  background-color: rgb(27, 27, 27);
 }
-
-.avatar {
-	display: flex;
-	border: 2px solid white 10px;
-	border-radius: 50%;
-	width: 30vmin;
-	margin: 5em auto 0 auto;
+body .prompt {
+  color: rgb(94, 189, 171);
 }
-
-.fa {
-	color: white;
-	text-decoration: none;
+body .prompt #user {
+  color: rgb(39, 127, 255);
+  font-weight: bold;
 }
-
-.socials {
-	text-align: center;
-	color: #fff;
-	margin: 3vh 0px !important;
+body .prompt #pwd {
+  color: rgb(240, 248, 255);
+  font-weight: bold;
 }
-
-.socials span {
-	display: inline-block !important;
-	margin-right: 2vw !important;
-	font-weight: normal !important;
-	font-size: 4vmin;
+body .prompt #cmd {
+  font-weight: normal;
+  color: rgb(73, 174, 230);
 }
-
-.socials span a {
-	font-weight: normal !important;
+body .output {
+  font-weight: normal;
 }
-
-.hide {
-	display: none;
+body .green {
+  color: rgb(94, 189, 171);
 }
-
-.jack {
-	font-size: 10vmin;
-	text-align: center;
-	font-family: 'VT323';
+body .blue {
+  color: rgb(39, 127, 255);
 }
-
-#jack {
-	padding-bottom: 10vmin;
+body .bold {
+  font-weight: bold;
 }
-
-.white {
-	color: white;
+body space {
+  white-space: pre;
 }
-
-.green {
-	color: #00C100;
+body a:hover {
+  transition: ease 300ms;
+  color: rgb(73, 174, 230);
+  font-weight: bold;
 }
-
-#subtxt {
-	color: #EBEDEF;
-}
-
-/*TYPEWRITER CODE*/
-.typewriter .jack {
-	display: none;
-	overflow: hidden;
-	border-right: .15em transparent;
-	white-space: nowrap;
-	margin: 0 auto;
-	letter-spacing: .15em;
-	animation:
-	typing 2s steps(40, end);
-}
-
-@keyframes typing {
-	from { width: 0 }
-	to { width: 100% }
-}
-
-@keyframes blink-caret {
-	from, to { border-color: transparent }
-	50% { border-color: orange; }
-}
-/*TYPEWRITER CODE*/
-
 
 @media (max-width: 1000px) {
-	.jack {
-		font-size: 5vmin;
-	}
-
-	.avatar {
-		margin: 5em auto 0 auto;
-	}
+  * {
+    font-size: 10pt;
+  }
+  body {
+    margin: 10px;
+  }
 }
