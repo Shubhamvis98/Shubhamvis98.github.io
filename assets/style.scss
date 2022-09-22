@@ -1,0 +1,76 @@
+$bgcolor: rgb(27, 27, 27);
+$font_color: rgb(240, 248, 255);
+$prompt1_col: rgb(94, 189, 171);
+$prompt2_col: rgb(39, 127, 255);
+$cmd: rgb(73, 174, 230);
+
+* {
+    margin: 0;
+    padding: 0;
+    color: $font_color;
+    line-height: 1.18;
+    font-size: 12pt;
+    text-decoration: none;
+    transition: ease 300ms;
+}
+
+body {
+    margin: 50px;
+    background-color: $bgcolor;
+    
+    .prompt {
+        color: $prompt1_col;
+        #user {
+            color: $prompt2_col;
+            font-weight: bold;
+        }
+        
+        #pwd {
+            color: $font_color;
+            font-weight: bold;
+        }
+        
+        #cmd {
+            font-weight: normal;
+            color: $cmd;
+        }
+    }
+
+    .output {
+        font-weight: normal;
+    }
+
+    .green {
+        color: $prompt1_col;
+    }
+    
+    .blue {
+        color: $prompt2_col;
+    }
+    
+    .bold {
+        font-weight: bold;
+    }
+    
+    space {
+        white-space: pre;
+    }
+
+    a {
+        &:hover {
+            transition: ease 300ms;
+            color: $cmd;
+            font-weight: bold;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    * {
+        font-size: 10pt;
+    }
+
+    body {
+        margin: 10px;
+    }
+}
