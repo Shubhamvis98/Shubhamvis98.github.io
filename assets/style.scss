@@ -34,6 +34,12 @@ body {
             font-weight: normal;
             color: $cmd;
         }
+
+        #portrait {
+            font-family: Courier;
+            font-weight: bold;
+            font-size: 0.6vh;
+        }
     }
 
     .output {
@@ -72,5 +78,13 @@ body {
 
     body {
         margin: 10px;
+
+        .prompt {
+            #portrait {
+                font-family: Courier;
+                font-weight: bold;
+                font-size:0.8vw;
+            }
+        }
     }
 }

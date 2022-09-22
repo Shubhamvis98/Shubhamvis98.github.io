@@ -27,6 +27,11 @@ body .prompt #cmd {
   font-weight: normal;
   color: rgb(73, 174, 230);
 }
+body .prompt #portrait {
+  font-family: Courier;
+  font-weight: bold;
+  font-size: 0.6vh;
+}
 body .output {
   font-weight: normal;
 }
@@ -55,4 +60,9 @@ body a:hover {
   body {
     margin: 10px;
   }
-}
+  body .prompt #portrait {
+    font-family: Courier;
+    font-weight: bold;
+    font-size: 0.8vw;
+  }
+}/*# sourceMappingURL=style.css.map */
