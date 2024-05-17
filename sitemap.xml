@@ -2,21 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2023-10-23T15:55:56+05:30</lastmod>
+    <loc>https://fossfrog.in/authors/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/compile-kernel-in-android-without-pc/</loc>
-    <lastmod>2023-10-23T15:55:56+05:30</lastmod>
+    <loc>https://fossfrog.in/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2023-10-23T15:55:56+05:30</lastmod>
+    <loc>https://fossfrog.in/</loc>
   </url><url>
-    <loc>http://localhost:1313/authors/</loc>
+    <loc>https://fossfrog.in/series/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-  </url><url>
-    <loc>http://localhost:1313/series/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://fossfrog.in/tags/</loc>
   </url>
 </urlset>

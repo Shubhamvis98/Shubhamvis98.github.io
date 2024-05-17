@@ -2,18 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>fossfrog</title>
-    <link>http://localhost:1313/</link>
+    <link>https://fossfrog.in/</link>
     <description>Recent content on fossfrog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Oct 2023 15:55:56 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Compile Kernel in Android Without PC</title>
-      <link>http://localhost:1313/blog/compile-kernel-in-android-without-pc/</link>
-      <pubDate>Mon, 23 Oct 2023 15:55:56 +0530</pubDate>
-      <guid>http://localhost:1313/blog/compile-kernel-in-android-without-pc/</guid>
-      <description>Most of the time I use my laptop that has a dual core celeron processor, which isn’t good in kernel compilation. So, I use Google cloud to compile kernels. Google cloud provides free 50 hours/week, which is more than enough to compile multiple kernels. The only thing you need is a google account. You can use Google cloud in your phone, without PC/Laptop. One more thing, you can follow the below tutorial to build in your PC as well, just skip first step.</description>
-    </item>
+    <atom:link href="https://fossfrog.in/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
