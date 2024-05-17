@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Compile Kernel in Android Without PC · fossfrog
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Shubham Vishwakarma">
+<meta name="description" content="Most of the time I use my laptop that has a dual core celeron processor, which isn’t good in kernel compilation. So, I use Google cloud to compile kernels. Google cloud provides free 50 hours/week, which is more than enough to compile multiple kernels. The only thing you need is a google account. You can use Google cloud in your phone, without PC/Laptop. One more thing, you can follow the below tutorial to build in your PC as well, just skip first step.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Compile Kernel in Android Without PC">
+  <meta name="twitter:description" content="Most of the time I use my laptop that has a dual core celeron processor, which isn’t good in kernel compilation. So, I use Google cloud to compile kernels. Google cloud provides free 50 hours/week, which is more than enough to compile multiple kernels. The only thing you need is a google account. You can use Google cloud in your phone, without PC/Laptop. One more thing, you can follow the below tutorial to build in your PC as well, just skip first step.">
+
+<meta property="og:url" content="http://localhost:1313/blog/compile-kernel-in-android-without-pc/">
+  <meta property="og:site_name" content="fossfrog">
+  <meta property="og:title" content="Compile Kernel in Android Without PC">
+  <meta property="og:description" content="Most of the time I use my laptop that has a dual core celeron processor, which isn’t good in kernel compilation. So, I use Google cloud to compile kernels. Google cloud provides free 50 hours/week, which is more than enough to compile multiple kernels. The only thing you need is a google account. You can use Google cloud in your phone, without PC/Laptop. One more thing, you can follow the below tutorial to build in your PC as well, just skip first step.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2023-10-23T15:55:56+05:30">
+    <meta property="article:modified_time" content="2023-10-23T15:55:56+05:30">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/blog/compile-kernel-in-android-without-pc/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      fossfrog
+    </a>
+    
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://localhost:1313/blog/compile-kernel-in-android-without-pc/">
+          Compile Kernel in Android Without PC
+        </a>
+      </h1>
+    </header>
+
+    <p>Most of the time I use my laptop that has a dual core celeron processor, which isn’t good in kernel compilation. So, I use Google cloud to compile kernels. Google cloud provides free 50 hours/week, which is more than enough to compile multiple kernels. The only thing you need is a google account. You can use Google cloud in your phone, without PC/Laptop. One more thing, you can follow the below tutorial to build in your PC as well, just skip first step. (-;</p>
+<ol>
+<li>
+<p>Open Google Cloud Console</p>
+<p>Go to cloud.google.com.
+Login with your google account.
+Click on “Console” at top-right corner.
+After clicking on “Console” you’ll see a terminal icon on top-right corner. Click on that icon.
+Now, a terminal will appear on the webpage. Here we’ll do our kernel compilation.</p>
+</li>
+<li>
+<p>Setup Build Environment</p>
+<p>Once you get the console, install necessary packages, toolchains and kernel source. You can download the toolchains from my repo or download according to your device.</p>
+<p>#Install necessary packages/libs</p>
+<p>sudo apt update
+sudo apt upgrade -y
+sudo apt install -y gcc-aarch64-linux-gnu build-essential libncurses-dev <br>
+libssl-dev flex bc git curl wget unzip python3 python-is-python3</p>
+</li>
+<li>
+<p>Download Toolchains and Kernel Source</p>
+<p>#Example: LineageOS kernel for OnePlus3
+#Create tmp directory and download source and toolchains
+mkdir tmp &amp;&amp; cd tmp
+wget <a href="https://github.com/Shubhamvis98/toolchains/archive/refs/heads/master.zip"  class="external-link" target="_blank" rel="noopener">https://github.com/Shubhamvis98/toolchains/archive/refs/heads/master.zip</a> -O tc.zip &amp;&amp; unzip -q tc.zip &amp;&amp; rm tc.zip
+wget <a href="https://github.com/LineageOS/android_kernel_oneplus_msm8996/archive/refs/heads/lineage-18.1.zip"  class="external-link" target="_blank" rel="noopener">https://github.com/LineageOS/android_kernel_oneplus_msm8996/archive/refs/heads/lineage-18.1.zip</a> -O k.zip &amp;&amp; unzip -q k.zip &amp;&amp; rm k.zip
+#The above commands will download, unzip and delete the zip files.</p>
+<p>#After above steps you&rsquo;ll get two directories, toolchains and kernel source directory:
+android_kernel_oneplus_msm8996-lineage-18.1 toolchains-master</p>
+</li>
+<li>
+<p>Setup Exports and Aliases</p>
+</li>
+</ol>
+<p>The below code block is all you need if you want to compile with CLANG or GCC. I’ve created two aliases for make command. You can adjust the parameters according to your need.</p>
+<p>If you want to compile with CLANG, use makecl and to build with GCC, use make command.</p>
+<p>TC=~/tmp/toolchains-master
+GCC=$TC/aarch64-linux-android-4.9/bin
+GCC32=$TC/arm-linux-androideabi-4.9/bin
+CLANG=$TC/clang-r428724/bin</p>
+<p>export PATH=$CLANG:$GCC:$GCC32:$PATH
+export CROSS_COMPILE=aarch64-linux-android-
+export CROSS_COMPILE_ARM32=arm-linux-androideabi-
+export CLANG_TRIPLE=aarch64-linux-gnu-</p>
+<p>DEFCONFIG=lineageos_oneplus3_defconfig
+export ARCH=arm64</p>
+<p>alias makecl=&ldquo;make CC=clang O=output&rdquo;
+alias make=&ldquo;make O=output&rdquo;</p>
+<ol start="5">
+<li>Let&rsquo;s Build&hellip;</li>
+</ol>
+<h1 id="cd-to-kernel-source">
+  cd to kernel source
+  <a class="heading-link" href="#cd-to-kernel-source">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>cd ~/tmp/android_kernel_oneplus_msm8996-lineage-18.1</p>
+<h1 id="to-build-with-gcc">
+  To build with GCC
+  <a class="heading-link" href="#to-build-with-gcc">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>make $DEFCONFIG
+make menuconfig
+make</p>
+<h1 id="to-build-with-clang">
+  To build with CLANG
+  <a class="heading-link" href="#to-build-with-clang">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>makecl $DEFCONFIG
+makecl menuconfig
+makecl</p>
+<ol start="6">
+<li>Get the kernel and dtbs</li>
+</ol>
+<p>After compilation, you can download the kernel and necessary dtbs to your local machine/phone to make boot.img.</p>
+<p>mkdir ~/tmp/out
+cp output/arch/arm*/boot/Image* ~/tmp/out</p>
+<h1 id="if-your-device-has-separate-dtb-from-kernel-then-you-need-the-dtb-files-as-well-to-flash-in-dtb-partition">
+  If your device has separate dtb from kernel then you need the dtb files as well to flash in dtb partition
+  <a class="heading-link" href="#if-your-device-has-separate-dtb-from-kernel-then-you-need-the-dtb-files-as-well-to-flash-in-dtb-partition">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>mkdir ~/tmp/out/dtbs
+find output -name &lsquo;<em>.dtb</em>&rsquo; -exec cp {} ~/tmp/out/dtbs ;</p>
+<h1 id="compress-kernel-and-dtbs-and-download-to-local">
+  Compress kernel and dtbs and download to local
+  <a class="heading-link" href="#compress-kernel-and-dtbs-and-download-to-local">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>cd ~/tmp
+tar -cpzf build.tgz out # this will create a build.tgz archive</p>
+<p>Now download the kernel to your local by clicking on “the three dots on top right corner -&gt; Download”
+7. Create boot.img</p>
+<pre><code>Clone or download Android Image Kitchen from my repo.
+Get your stock boot.img and run ./unpackimg boot.img to unpack the stock boot image.
+After that you’ll see the aik will create a directory named split with unpacked kernel and dtb.
+Extract the downloaded build.tgz archive using tar -xpf build.tgz and replace the kernel in split directory.
+Now repack the boot.img using ./repackimg. This will create a new image in aik directory.
+</code></pre>
+<p>Now you can boot/flash your new boot image using fastboot or from recovery.
+NOTE:</p>
+<pre><code>Try booting before flashing the boot image.
+    fastboot boot new-boot.img
+if everything works as expected, then you can flash it.
+    fastboot flash new-boot.img
+Always backup your original/stock boot image.
+Try to avoid using multiple cores and continuous kernel compilation in google cloud otherwise google will ban cloud access to your account. Don’t worry, your gmail, drive and other apps will work.
+</code></pre>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2024
+     Shubham Vishwakarma 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
