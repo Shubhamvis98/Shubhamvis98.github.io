@@ -1,0 +1,17 @@
+Codename: rolling
+Date: Sat, 22 Jun 2024 12:25:21 UTC
+Architectures: amd64
+Components: main
+Description: My Local Repository
+MD5Sum:
+ 42c51b11864249bfab66a3419f5edbff 454 main/binary-amd64/Packages
+ 5f287d4a0136a10c45b8b49705eafcb6 326 main/binary-amd64/Packages.gz
+ e666d8a361eb6674266fbdaaec48cb09 69 main/binary-amd64/Release
+SHA1:
+ dfd39de4aea517d04c5f74c6576bd26d3a00f87a 454 main/binary-amd64/Packages
+ 7140c8c0b7424829ba6ba7605aa0b021d2350b62 326 main/binary-amd64/Packages.gz
+ ca20145c1f485f7b88944bdb22dbf2997068c6c9 69 main/binary-amd64/Release
+SHA256:
+ f3d08bc69ce6e60d4e6c6e82f2c0ebac7c3da811cf566f7aa4d3e99551fdc6df 454 main/binary-amd64/Packages
+ 058d062fd3654cd011815a5f2ebe1f85d636779987d8bfdfa806166be836fb20 326 main/binary-amd64/Packages.gz
+ ce2698f3d227f93caa8befe2110b420f534b337f4466bcde6adedde2d9fb29a0 69 main/binary-amd64/Release

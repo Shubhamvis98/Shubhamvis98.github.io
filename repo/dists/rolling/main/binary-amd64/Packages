@@ -1,0 +1,15 @@
+Package: nidum-plymouth-theme
+Version: 1.0
+Maintainer: ShubhamVis98
+Architecture: all
+Installed-Size: 348
+Depends: plymouth
+Priority: optional
+Section: misc
+Filename: pool/main/n/nidum-plymouth-theme/nidum-plymouth-theme_1.0_all.deb
+Size: 173728
+SHA256: ab0ba29d9a65ab29a7a649abeee35b9f01ef7ff73fc6ac1842364593319f1baf
+SHA1: b267e4c5abd20cb1bc040c11461acadab9afdf4b
+MD5sum: a6ed41298e6fdaef15afddf9f94ce24f
+Description: Plymouth theme for Nidum overlay
+
