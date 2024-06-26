@@ -2,25 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>fossfrog</title>
-    <link>http://localhost:1313/</link>
+    <link>https://fossfrog.in/</link>
     <description>Recent content on fossfrog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 26 Jun 2024 14:41:22 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>My Debian Repository</title>
-      <link>http://localhost:1313/debrepo/</link>
-      <pubDate>Wed, 26 Jun 2024 14:41:22 +0530</pubDate>
-      <guid>http://localhost:1313/debrepo/</guid>
-      <description> Adding repository to your debian distribution: Link to heading Run below command to do this automatically: Link to heading sudo sh -c &amp;#34;$(curl -fsSL https://repo.fossfrog.in/setup.sh)&amp;#34; or Link to heading Download fossfrog.gpg file and put under /etc/apt/trusted.gpg.d Create a file named &amp;ldquo;fossfrog.list&amp;rdquo; under /etc/apt/sources.list.d and put below content in the file: deb https://repo.fossfrog.in stable main Apps present in my repository: Link to heading nethunter network-scanner hijacker </description>
-    </item>
-    <item>
-      <title>Donate</title>
-      <link>http://localhost:1313/donate/</link>
-      <pubDate>Wed, 26 Jun 2024 14:40:13 +0530</pubDate>
-      <guid>http://localhost:1313/donate/</guid>
-      <description> Support My Work Link to heading If you find my work useful and would like to support it, consider making a donation. Link to heading You can also subscribe to my YouTube channel where I post videos on Linux, Android, Kernel and other Linux stuff. (-; Link to heading </description>
-    </item>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://fossfrog.in/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
