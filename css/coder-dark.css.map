@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "coder-dark.css",
-	"sourceRoot": "/home/jack/Documents/hugo_site/fossfrog",
+	"sourceRoot": "/home/jack/Templates/fossfrog",
 	"sources": [
 		"themes/coder/assets/scss/coder-dark.scss",
 		"themes/coder/assets/scss/_variables.scss",

@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "coder.css",
-	"sourceRoot": "/home/jack/Documents/hugo_site/fossfrog",
+	"sourceRoot": "/home/jack/Templates/fossfrog",
 	"sources": [
 		"themes/coder/assets/scss/coder.scss",
 		"themes/coder/assets/scss/css/normalize.css",
